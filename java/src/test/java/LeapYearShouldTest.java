@@ -20,8 +20,8 @@ public class LeapYearShouldTest {
     assertTrue(LeapYear.isLeapYear(400));
   }
   @Test
-  public void is_a_leap_year_if_not_divisible_by_one_Hundred_and_not_four_hundred() {
-    assertTrue(LeapYear.isLeapYear(1300));
+  public void is_not_a_leap_year_if_not_divisible_by_one_Hundred_and_not_four_hundred() {
+    assertFalse(LeapYear.isLeapYear(1300));
   }
 
 }
