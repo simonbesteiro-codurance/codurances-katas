@@ -1,8 +1,13 @@
 public class LeapYear {
   public static boolean isLeapYear(int year) {
-    if (year % 4 != 0) return false;
-    else if (year % 100 != 0) return true;
-    else if (year % 400 != 0) return false;
+    if (isModuleOf(year, 4)) return false;
+    else if (isModuleOf(year, 100)) return true;
+    else if (isModuleOf(year, 400)) return false;
     return true;
   }
+
+  private static boolean isModuleOf(int year, int base) {
+    return year % base != 0;
+  }
+
 }
