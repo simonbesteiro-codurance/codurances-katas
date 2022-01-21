@@ -1,17 +1,18 @@
 # Goal
-Design and implement a software that validates a password applying TDD.
+Implement a class that checks if a year is a leap year
 
-The password will be introduced by the user (as an argument of the method) and should return if the password is valid or not.
+All the following rules must be satisfied:
 
-A valid password should meet the following requirements:
+Is NOT a leap year if NOT divisible by 4
+Is a leap year if divisible by 4
+Is a leap year if divisible by 400
+Is NOT a leap year if divisible by 100 but NOT by 400
+Examples:
 
-	 - Have more than 8 characters
-	 - Contains a capital letter
-	 - Contains a lowercase
-	 - Contains a number
-	 - Contains an underscore
+1997 is NOT a leap year (not divisible by 4)
+1996 is a leap year (divisible by 4)
+1600 is a leap year (divisible by 400)
+1800 is NOT a leap year (divisible by 4, divisible by 100, NOT divisible by 400)
+Hint: Watch this video on Explanatory Methods before starting the exercise.
 
-# Technical requirements:
 
-	- We want a method that answers if the password is valid or not.
-	- We don't want to know the reason when the password is invalid (the return value is a boolean)
