@@ -39,8 +39,5 @@ public class LeapYearShouldTest {
   public void is_a_leap_year_1600() {
     assertTrue(LeapYear.isLeapYear(1600));
   }
-  @Test
-  public void is_a_leap_year_100() {
-    assertFalse(LeapYear.isLeapYear(1800));
-  }
+
 }

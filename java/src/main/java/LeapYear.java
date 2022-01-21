@@ -1,9 +1,15 @@
 public class LeapYear {
+
   public static boolean isLeapYear(int year) {
-    if (isNotModuleOf(year, 4)) return false;
-    else if (isNotModuleOf(year, 100)) return true;
-    else if (isNotModuleOf(year, 400)) return false;
-    return true;
+
+    if (isModuleOf(year, 100) && isNotModuleOf(year, 400)) return false;
+    if (isModuleOf(year, 4)) return true;
+    return false;
+
+  }
+
+  private static boolean isModuleOf(int checkedNumber, int base) {
+    return checkedNumber % base == 0;
   }
 
   private static boolean isNotModuleOf(int checkedNumber, int base) {
